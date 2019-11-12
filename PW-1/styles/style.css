@@ -1,0 +1,16 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+}
+
+header {
+	height: 250px;
+	width: 800px;
+	background: linear-gradient(
+		180deg, rgba(8,57,122,1) 50%, 
+		rgba(15,106,219,1) 50%);
+}
