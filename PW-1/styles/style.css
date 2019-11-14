@@ -169,3 +169,30 @@ h2 {
 footer {
 	background-color: rgba(8,57,122,1);
 }
+
+.footer-content-wrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+
+.footer-desc-text {
+	width: 447px;
+}
+
+p.footer-desc {
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+	line-height: 24px;
+}
+
+.footer-links {
+	width: 165px;
+	line-height: 24px;
+}
+
+a.footer-link {
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+}
