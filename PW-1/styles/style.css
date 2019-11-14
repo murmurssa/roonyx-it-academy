@@ -69,7 +69,6 @@ h1 {
 .content-wrapper-column {
 	display: flex;
 	flex-direction: column;
-	background-color: gray;
 }
 
 .content-item {
@@ -100,8 +99,14 @@ p {
 	font-size: 12px;
 }
 
+.command-list-wrapper {
+	margin-top: 5px;
+}
 
-
+.command-list-item {
+	background-color: rgba(234,242,248,1);
+	border-bottom: 1px solid rgba(150,150,150,0.5);
+}
 
 
 
