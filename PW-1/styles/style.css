@@ -113,9 +113,13 @@ p {
 .command-list-item {
 	background-color: rgba(234,242,248,1);
 	border-bottom: 1px solid rgba(150,150,150,0.5);
+	padding: 5px;
 }
 
-
+.command {
+	font: bold 12px monospace;
+	margin-bottom: 10px;
+}
 
 .content-border {
 
