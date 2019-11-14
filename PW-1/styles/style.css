@@ -19,7 +19,7 @@ header {
 	height: 250px;
 	background: linear-gradient(
 		180deg, rgba(8,57,122,1) 50%, 
-		rgba(15,106,219,1) 50%);
+		rgba(15,106,219,0.8) 50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -105,15 +105,19 @@ p {
 .command-span {
 	font: bold 10px monospace;
 	color: rgba(100,100,100,1);
-	background-color: rgba(234,242,248,1);
+	background-color: rgba(225,232,226,1);
+	padding: 1px 4px;
 }
 
 .command-list-wrapper {
 	margin: 5px 0 10px 0;
 }
 
+.command-list-item, .summary {
+	background-color: rgba(234,242,248,0.4);
+}
+
 .command-list-item {
-	background-color: rgba(234,242,248,1);
 	border-bottom: 1px solid rgba(150,150,150,0.5);
 	padding: 5px;
 }
@@ -154,7 +158,6 @@ h2 {
 }
 
 .summary {
-	background-color: rgba(234,242,248,1);
 	border-top: 1px solid rgba(150,150,150,0.5);
 }
 
