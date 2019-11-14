@@ -169,70 +169,74 @@
 		</div>
 
 		<div class="content-wrapper">
-			<div class="content-item">
-				<h3>Make changes</h3>
+			<div class="content-wrapper-column">
+				<div class="content-item">
+					<h3>Make changes</h3>
 
-				<p>Browse and inspect the evolution of project files</p>
+					<p>Browse and inspect the evolution of project files</p>
 
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git log</p>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git log</p>
 
-						<p>Lists version history for the current branch</p>
-					</div>
+							<p>Lists version history for the current branch</p>
+						</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git log --follow [file]</p>
+						<div class="command-list-item">
+							<p class="command">$ git log --follow [file]</p>
 
-						<p>Lists version history for a file, including renames</p>
-					</div>
+							<p>Lists version history for a file, including renames</p>
+						</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git diff [first-branch]...[second-branch]</p>
+						<div class="command-list-item">
+							<p class="command">$ git diff [first-branch]...[second-branch]</p>
 
-						<p>Shows content differences between two branches</p>
-					</div>
+							<p>Shows content differences between two branches</p>
+						</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git show [commit]</p>
+						<div class="command-list-item">
+							<p class="command">$ git show [commit]</p>
 
-						<p>Outputs metadata and content changes of the specified commit</p>
-					</div>
+							<p>Outputs metadata and content changes of the specified commit</p>
+						</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git add [file]</p>
+						<div class="command-list-item">
+							<p class="command">$ git add [file]</p>
 
-						<p>Snapshots the file in preparation for versioning</p>
-					</div>
+							<p>Snapshots the file in preparation for versioning</p>
+						</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git commit -m "[descriptive message]"</p>
+						<div class="command-list-item">
+							<p class="command">$ git commit -m "[descriptive message]"</p>
 
-						<p>Records file snapshots permanently in version history</p>
+							<p>Records file snapshots permanently in version history</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			
-			<div class="content-item">
-				<h3>Redo commits</h3>
 
-				<p>Erase mistakes and craft replacement history</p>
+			<div class="content-wrapper-column">
+				<div class="content-item">
+					<h3>Redo commits</h3>
 
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git reset [commit]</p>
+					<p>Erase mistakes and craft replacement history</p>
 
-						<p>Undoes all commits after [commit], preserving changes locally</p>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git reset [commit]</p>
+
+							<p>Undoes all commits after [commit], preserving changes locally</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git reset --hard [commit]</p>
+
+							<p>Discards all history and changes back to the specified commit</p>
+						</div>
 					</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git reset --hard [commit]</p>
-
-						<p>Discards all history and changes back to the specified commit</p>
-					</div>
+					<p>CAUTION! Changing history can have nasty side effects. If you need to change commits that exist on GitHub (the remote), proceed with caution. If you need help, reach out at github.community or contact support.</p>
 				</div>
-
-				<p>CAUTION! Changing history can have nasty side effects. If you need to change commits that exist on GitHub (the remote), proceed with caution. If you need help, reach out at github.community or contact support.</p>
 			</div>
 
 			<div class="content-item-image"></div>

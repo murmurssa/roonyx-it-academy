@@ -9,9 +9,10 @@ body {
 
 header, .content, footer {
 	box-sizing: border-box;
-	width: 800px;
+	width: 850px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 30px;
 }
 
 header {
@@ -23,7 +24,6 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	color: white;
-	padding: 30px 40px;
 }
 
 a {
@@ -55,10 +55,6 @@ h1 {
 	font-size: 16px;
 }
 
-.content {
-	padding: 40px;
-}
-
 .content-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -69,10 +65,10 @@ h1 {
 .content-wrapper-column {
 	display: flex;
 	flex-direction: column;
+	width: 375px;
 }
 
 .content-item {
-	width: calc((800px / 2) - (40px * 2));
 	margin-bottom: 25px;
 }
 
@@ -127,12 +123,11 @@ p {
 
 .content-item-image {
 	background-color: green;
-	width: calc(800px - (40px * 2));
+	width: calc(850px - (30px * 2));
 	height: 250px;
 }
 
 
 footer {
 	background-color: rgba(8,57,122,1);
-	padding: 40px;
 }
