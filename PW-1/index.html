@@ -23,138 +23,145 @@
 
 	<section class="content">
 		<div class="content-wrapper">
-			<div class="content-item">
-				<h3>Install</h3>
+			<div class="content-wrapper-column">
+				<div class="content-item">
+					<h3>Install</h3>
 
-				<a href="" class="link-bold" target="_blank">GitHub for Windows</a>
-				<a href="" class="link-thin" target="_blank">https://windows.github.com</a>
+					<a href="" class="link-bold" target="_blank">GitHub for Windows</a>
+					<a href="" class="link-thin" target="_blank">https://windows.github.com</a>
 
-				<a href="" class="link-bold" target="_blank">GitHub for Mac</a>
-				<a href="" class="link-thin" target="_blank">https://mac.github.com</a>
+					<a href="" class="link-bold" target="_blank">GitHub for Mac</a>
+					<a href="" class="link-thin" target="_blank">https://mac.github.com</a>
 
-				<a href="" class="link-bold" target="_blank">GitHub for All Platforms</a>
-				<a href="" class="link-thin" target="_blank">https://git-scm.com</a>
+					<a href="" class="link-bold" target="_blank">GitHub for All Platforms</a>
+					<a href="" class="link-thin" target="_blank">https://git-scm.com</a>
 
-				<p>Git distributions for Linux and POSIX systems are available on the official Git SCM web site.</p>
-			</div>
+					<p>Git distributions for Linux and POSIX systems are available on the official Git SCM web site.</p>
+				</div>
 
-			<div class="content-item">
-				<h3>Configure tooling</h3>
+				<div class="content-item">
+					<h3>Configure tooling</h3>
 
-				<p>Configure user information for all local repositories</p>
+					<p>Configure user information for all local repositories</p>
 
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git config --global user.name "[name]"</p>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git config --global user.name "[name]"</p>
 
-						<p>Sets the name you want attached to your commit transactions</p>
+							<p>Sets the name you want attached to your commit transactions</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git config --global user.email "[email address]"</p>
+
+							<p>Sets the email you want attached to your commit transactions</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git config --global color.ui auto</p>
+
+							<p>Enables helpful colorization of command line output</p>
+						</div>
 					</div>
+				</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git config --global user.email "[email address]"</p>
+				<div class="content-item">
+					<h3>Branches</h3>
 
-						<p>Sets the email you want attached to your commit transactions</p>
-					</div>
+					<p>Branches are an important part of working with Git. Any commits you make will be made on the branch you're currently “checked out” to. Use <span class="command-span">git status</span> to see which branch that is.</p>
 
-					<div class="command-list-item">
-						<p class="command">$ git config --global color.ui auto</p>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git branch [branch-name]</p>
 
-						<p>Enables helpful colorization of command line output</p>
+							<p>Creates a new branch</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git checkout [branch-name]</p>
+
+							<p>Switches to the specified branch and updates the working directory</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git merge [branch]</p>
+
+							<p>Combines the specified branch’s history into the current branch. This is usually done in pull requests, but is an important Git operation.</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git branch -d [branch-name]</p>
+
+							<p>Deletes the specified branch</p>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="content-item">
-				<h3>Branches</h3>
+			<div class="content-wrapper-column">
+				<div class="content-item">
+					<h3>Create repositories</h3>
 
-				<p>Branches are an important part of working with Git. Any commits you make will be made on the branch you're currently “checked out” to. Use <span class="command-span">git status</span> to see which branch that is.</p>
+					<p>When starting out with a new repository, you only need to do it once; either locally, then push to GitHub, or by cloning an existing repository.</p>
 
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git branch [branch-name]</p>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git init</p>
 
-						<p>Creates a new branch</p>
+							<p>Turn an existing directory into a git repository</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git clone [url]</p>
+
+							<p>Clone (download) a repository that already exists on GitHub, including all of the files, branches, and commits</p>
+						</div>
 					</div>
+				</div>
 
-					<div class="command-list-item">
-						<p class="command">$ git checkout [branch-name]</p>
+				<div class="content-item">
+					<h3>The .gitgnore file</h3>
 
-						<p>Switches to the specified branch and updates the working directory</p>
-					</div>
+					<p>
+						Sometimes it may be a good idea to exclude files from being tracked with Git. This is typically done in a special file named <span class="command-span">.gitignore</span>. You can find helpful templates for <span class="command-span">.gitignore</span> files at <a href="" class="link-blue link-inline">github.com/github/gitignore</a>.
+					</p>
+				</div>
+				
+				<div class="content-item">
+					<h3>Synchronize changes</h3>
 
-					<div class="command-list-item">
-						<p class="command">$ git merge [branch]</p>
+					<p>Synchronize your local repository with the remote repository on GitHub.com</p>
 
-						<p>Combines the specified branch’s history into the current branch. This is usually done in pull requests, but is an important Git operation.</p>
-					</div>
+					<div class="command-list-wrapper">
+						<div class="command-list-item">
+							<p class="command">$ git fetch</p>
 
-					<div class="command-list-item">
-						<p class="command">$ git branch -d [branch-name]</p>
+							<p>Downloads all history from the remote tracking branches</p>
+						</div>
 
-						<p>Deletes the specified branch</p>
+						<div class="command-list-item">
+							<p class="command">$ git merge</p>
+
+							<p>Combines remote tracking branch into current local branch</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git push</p>
+
+							<p>Uploads all local branch commits to GitHub</p>
+						</div>
+
+						<div class="command-list-item">
+							<p class="command">$ git pull</p>
+
+							<p>Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. <span class="command-span">git pull</span> is a combination of <span class="command-span">git fetch</span> and <span class="command-span">git merge</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="content-item">
-				<h3>Create repositories</h3>
 
-				<p>When starting out with a new repository, you only need to do it once; either locally, then push to GitHub, or by cloning an existing repository.</p>
-
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git init</p>
-
-						<p>Turn an existing directory into a git repository</p>
-					</div>
-
-					<div class="command-list-item">
-						<p class="command">$ git clone [url]</p>
-
-						<p>Clone (download) a repository that already exists on GitHub, including all of the files, branches, and commits</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<h3>The .gitgnore file</h3>
-
-				<p>
-					Sometimes it may be a good idea to exclude files from being tracked with Git. This is typically done in a special file named <span class="command-span">.gitignore</span>. You can find helpful templates for <span class="command-span">.gitignore</span> files at <a href="" class="link-blue link-inline">github.com/github/gitignore</a>.
-				</p>
-			</div>
-		
-			<div class="content-item">
-				<h3>Synchronize changes</h3>
-
-				<p>Synchronize your local repository with the remote repository on GitHub.com</p>
-
-				<div class="command-list-wrapper">
-					<div class="command-list-item">
-						<p class="command">$ git fetch</p>
-
-						<p>Downloads all history from the remote tracking branches</p>
-					</div>
-
-					<div class="command-list-item">
-						<p class="command">$ git merge</p>
-
-						<p>Combines remote tracking branch into current local branch</p>
-					</div>
-
-					<div class="command-list-item">
-						<p class="command">$ git push</p>
-
-						<p>Uploads all local branch commits to GitHub</p>
-					</div>
-
-					<div class="command-list-item">
-						<p class="command">$ git pull</p>
-
-						<p>Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. <span class="command-span">git pull</span> is a combination of <span class="command-span">git fetch</span> and <span class="command-span">git merge</span></p>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 
 		<div class="content-border">
