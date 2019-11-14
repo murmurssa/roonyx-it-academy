@@ -7,7 +7,7 @@ body {
 }
 
 
-header, .content, footer {
+header, .content, .summary, footer {
 	box-sizing: border-box;
 	width: 850px;
 	margin-left: auto;
@@ -101,8 +101,9 @@ p {
 	line-height: 15px;
 }
 
+
 .command-span {
-	font: 10px monospace;
+	font: bold 10px monospace;
 	color: rgba(100,100,100,1);
 	background-color: rgba(234,242,248,1);
 }
@@ -117,8 +118,11 @@ p {
 	padding: 5px;
 }
 
-.command {
+.command, .summary-span {
 	font: bold 12px monospace;
+}
+
+.command {
 	margin-bottom: 10px;
 }
 
@@ -149,6 +153,18 @@ h2 {
 	background-size: contain;
 }
 
+.summary {
+	background-color: rgba(234,242,248,1);
+	border-top: 1px solid rgba(150,150,150,0.5);
+}
+
+.content-summary {
+	padding-right: 110px;
+}
+
+.content-summary-wrapper > p {
+	line-height: 20px;
+}
 
 footer {
 	background-color: rgba(8,57,122,1);
