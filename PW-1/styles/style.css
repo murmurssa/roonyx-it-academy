@@ -143,9 +143,10 @@ h2 {
 }
 
 .content-item-image {
-	background-color: green;
 	width: calc(850px - (30px * 2));
-	height: 250px;
+	height: 200px;
+	background: url(../images/github-flow.png) no-repeat center;
+	background-size: contain;
 }
 
 
