@@ -1,301 +1,323 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Git Cheat Sheet</title>
-	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+  <meta charset="UTF-8">
+  <title>Git Cheat Sheet</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
+
 <body>
-	<header>
-		<div class="header-title">
-			<a href="https://github.com/" class="link-inline" target="_blank">
-				<div class="logo">
-					<img src="images/github-logo-white.png" alt="GitHub Logo">
-				</div>
-			</a>
-			
-			<h1>Git Cheat Sheet</h1>
-		</div>
+  <header>
+    <div class="header-title">
+      <a href="https://github.com/" class="link-inline" target="_blank">
+        <div class="logo">
+          <img src="images/github-logo-white.png" alt="GitHub Logo">
+        </div>
+      </a>
 
-		<p class="header-desc">Git is the open source distributed version control system that facilitates GitHub activities on your laptop or desktop. This cheat sheet summarizes commonly used Git command line instructions for quick reference.</p>
-	</header>
+      <h1>Git Cheat Sheet</h1>
+    </div>
 
-	<section class="content">
-		<div class="content-wrapper">
-			<div class="content-wrapper-column">
-				<div class="content-item">
-					<h3>Install</h3>
+    <p class="header-desc">Git is the open source distributed version control system that facilitates GitHub activities
+      on your laptop or desktop. This cheat sheet summarizes commonly used Git command line instructions for quick
+      reference.</p>
+  </header>
 
-					<a href="https://desktop.github.com/" class="link-bold" target="_blank">GitHub for Windows</a>
-					<a href="https://desktop.github.com/" class="link-thin" target="_blank">https://windows.github.com</a>
+  <section class="content">
+    <div class="content-wrapper">
+      <div class="content-wrapper-column">
+        <div class="content-item">
+          <h3>Install</h3>
 
-					<a href="https://desktop.github.com/" class="link-bold" target="_blank">GitHub for Mac</a>
-					<a href="https://desktop.github.com/" class="link-thin" target="_blank">https://mac.github.com</a>
+          <a href="https://desktop.github.com/" class="link-bold" target="_blank">GitHub for Windows</a>
+          <a href="https://desktop.github.com/" class="link-thin" target="_blank">https://windows.github.com</a>
 
-					<a href="https://git-scm.com/" class="link-bold" target="_blank">GitHub for All Platforms</a>
-					<a href="https://git-scm.com/" class="link-thin" target="_blank">https://git-scm.com</a>
+          <a href="https://desktop.github.com/" class="link-bold" target="_blank">GitHub for Mac</a>
+          <a href="https://desktop.github.com/" class="link-thin" target="_blank">https://mac.github.com</a>
 
-					<p>Git distributions for Linux and POSIX systems are available on the official Git SCM web site.</p>
-				</div>
+          <a href="https://git-scm.com/" class="link-bold" target="_blank">GitHub for All Platforms</a>
+          <a href="https://git-scm.com/" class="link-thin" target="_blank">https://git-scm.com</a>
 
-				<div class="content-item">
-					<h3>Configure tooling</h3>
+          <p>Git distributions for Linux and POSIX systems are available on the official Git SCM web site.</p>
+        </div>
 
-					<p>Configure user information for all local repositories</p>
+        <div class="content-item">
+          <h3>Configure tooling</h3>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git config --global user.name "[name]"</p>
+          <p>Configure user information for all local repositories</p>
 
-							<p>Sets the name you want attached to your commit transactions</p>
-						</div>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git config --global user.name "[name]"</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git config --global user.email "[email address]"</p>
+              <p>Sets the name you want attached to your commit transactions</p>
+            </div>
 
-							<p>Sets the email you want attached to your commit transactions</p>
-						</div>
+            <div class="command-list-item">
+              <p class="command">$ git config --global user.email "[email address]"</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git config --global color.ui auto</p>
+              <p>Sets the email you want attached to your commit transactions</p>
+            </div>
 
-							<p>Enables helpful colorization of command line output</p>
-						</div>
-					</div>
-				</div>
+            <div class="command-list-item">
+              <p class="command">$ git config --global color.ui auto</p>
 
-				<div class="content-item">
-					<h3>Branches</h3>
+              <p>Enables helpful colorization of command line output</p>
+            </div>
+          </div>
+        </div>
 
-					<p>Branches are an important part of working with Git. Any commits you make will be made on the branch you're currently “checked out” to. Use <span class="command-span">git status</span> to see which branch that is.</p>
+        <div class="content-item">
+          <h3>Branches</h3>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git branch [branch-name]</p>
+          <p>Branches are an important part of working with Git. Any commits you make will be made on the branch you're
+            currently “checked out” to. Use <span class="command-span">git status</span> to see which branch that is.
+          </p>
 
-							<p>Creates a new branch</p>
-						</div>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git branch [branch-name]</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git checkout [branch-name]</p>
+              <p>Creates a new branch</p>
+            </div>
 
-							<p>Switches to the specified branch and updates the working directory</p>
-						</div>
+            <div class="command-list-item">
+              <p class="command">$ git checkout [branch-name]</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git merge [branch]</p>
+              <p>Switches to the specified branch and updates the working directory</p>
+            </div>
 
-							<p>Combines the specified branch’s history into the current branch. This is usually done in pull requests, but is an important Git operation.</p>
-						</div>
+            <div class="command-list-item">
+              <p class="command">$ git merge [branch]</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git branch -d [branch-name]</p>
+              <p>Combines the specified branch’s history into the current branch. This is usually done in pull requests,
+                but is an important Git operation.</p>
+            </div>
 
-							<p>Deletes the specified branch</p>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="command-list-item">
+              <p class="command">$ git branch -d [branch-name]</p>
 
-			<div class="content-wrapper-column">
-				<div class="content-item">
-					<h3>Create repositories</h3>
+              <p>Deletes the specified branch</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-					<p>When starting out with a new repository, you only need to do it once; either locally, then push to GitHub, or by cloning an existing repository.</p>
+      <div class="content-wrapper-column">
+        <div class="content-item">
+          <h3>Create repositories</h3>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git init</p>
+          <p>When starting out with a new repository, you only need to do it once; either locally, then push to GitHub,
+            or by cloning an existing repository.</p>
 
-							<p>Turn an existing directory into a git repository</p>
-						</div>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git init</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git clone [url]</p>
+              <p>Turn an existing directory into a git repository</p>
+            </div>
 
-							<p>Clone (download) a repository that already exists on GitHub, including all of the files, branches, and commits</p>
-						</div>
-					</div>
-				</div>
+            <div class="command-list-item">
+              <p class="command">$ git clone [url]</p>
 
-				<div class="content-item">
-					<h3>The .gitgnore file</h3>
+              <p>Clone (download) a repository that already exists on GitHub, including all of the files, branches, and
+                commits</p>
+            </div>
+          </div>
+        </div>
 
-					<p>
-						Sometimes it may be a good idea to exclude files from being tracked with Git. This is typically done in a special file named <span class="command-span">.gitignore</span>. You can find helpful templates for <span class="command-span">.gitignore</span> files at <a href="https://github.com/github/gitignore" class="link-blue link-inline" target="_blank">github.com/github/gitignore</a>.
-					</p>
-				</div>
-				
-				<div class="content-item">
-					<h3>Synchronize changes</h3>
+        <div class="content-item">
+          <h3>The .gitgnore file</h3>
 
-					<p>Synchronize your local repository with the remote repository on GitHub.com</p>
+          <p>
+            Sometimes it may be a good idea to exclude files from being tracked with Git. This is typically done in a
+            special file named <span class="command-span">.gitignore</span>. You can find helpful templates for <span
+              class="command-span">.gitignore</span> files at <a href="https://github.com/github/gitignore"
+              class="link-blue link-inline" target="_blank">github.com/github/gitignore</a>.
+          </p>
+        </div>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git fetch</p>
+        <div class="content-item">
+          <h3>Synchronize changes</h3>
 
-							<p>Downloads all history from the remote tracking branches</p>
-						</div>
+          <p>Synchronize your local repository with the remote repository on GitHub.com</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git merge</p>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git fetch</p>
 
-							<p>Combines remote tracking branch into current local branch</p>
-						</div>
+              <p>Downloads all history from the remote tracking branches</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git push</p>
+            <div class="command-list-item">
+              <p class="command">$ git merge</p>
 
-							<p>Uploads all local branch commits to GitHub</p>
-						</div>
+              <p>Combines remote tracking branch into current local branch</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git pull</p>
+            <div class="command-list-item">
+              <p class="command">$ git push</p>
 
-							<p>Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. <span class="command-span">git pull</span> is a combination of <span class="command-span">git fetch</span> and <span class="command-span">git merge</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+              <p>Uploads all local branch commits to GitHub</p>
+            </div>
 
-		<div class="content-border">
-			<div class="title">
-				<div class="logo">
-					<img src="images/github-logo-white.png" alt="GitHub Logo">
-				</div>
+            <div class="command-list-item">
+              <p class="command">$ git pull</p>
 
-				<h2>Git Cheat Sheet</h2>
-			</div>
-		</div>
+              <p>Updates your current local working branch with all new commits from the corresponding remote branch on
+                GitHub. <span class="command-span">git pull</span> is a combination of <span class="command-span">git
+                  fetch</span> and <span class="command-span">git merge</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<div class="content-wrapper">
-			<div class="content-wrapper-column">
-				<div class="content-item">
-					<h3>Make changes</h3>
+    <div class="content-border">
+      <div class="title">
+        <div class="logo">
+          <img src="images/github-logo-white.png" alt="GitHub Logo">
+        </div>
 
-					<p>Browse and inspect the evolution of project files</p>
+        <h2>Git Cheat Sheet</h2>
+      </div>
+    </div>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git log</p>
+    <div class="content-wrapper">
+      <div class="content-wrapper-column">
+        <div class="content-item">
+          <h3>Make changes</h3>
 
-							<p>Lists version history for the current branch</p>
-						</div>
+          <p>Browse and inspect the evolution of project files</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git log --follow [file]</p>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git log</p>
 
-							<p>Lists version history for a file, including renames</p>
-						</div>
+              <p>Lists version history for the current branch</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git diff [first-branch]...[second-branch]</p>
+            <div class="command-list-item">
+              <p class="command">$ git log --follow [file]</p>
 
-							<p>Shows content differences between two branches</p>
-						</div>
+              <p>Lists version history for a file, including renames</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git show [commit]</p>
+            <div class="command-list-item">
+              <p class="command">$ git diff [first-branch]...[second-branch]</p>
 
-							<p>Outputs metadata and content changes of the specified commit</p>
-						</div>
+              <p>Shows content differences between two branches</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git add [file]</p>
+            <div class="command-list-item">
+              <p class="command">$ git show [commit]</p>
 
-							<p>Snapshots the file in preparation for versioning</p>
-						</div>
+              <p>Outputs metadata and content changes of the specified commit</p>
+            </div>
 
-						<div class="command-list-item">
-							<p class="command">$ git commit -m "[descriptive message]"</p>
+            <div class="command-list-item">
+              <p class="command">$ git add [file]</p>
 
-							<p>Records file snapshots permanently in version history</p>
-						</div>
-					</div>
-				</div>
-			</div>
+              <p>Snapshots the file in preparation for versioning</p>
+            </div>
 
-			<div class="content-wrapper-column">
-				<div class="content-item">
-					<h3>Redo commits</h3>
+            <div class="command-list-item">
+              <p class="command">$ git commit -m "[descriptive message]"</p>
 
-					<p>Erase mistakes and craft replacement history</p>
+              <p>Records file snapshots permanently in version history</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-					<div class="command-list-wrapper">
-						<div class="command-list-item">
-							<p class="command">$ git reset [commit]</p>
+      <div class="content-wrapper-column">
+        <div class="content-item">
+          <h3>Redo commits</h3>
 
-							<p>Undoes all commits after [commit], preserving changes locally</p>
-						</div>
+          <p>Erase mistakes and craft replacement history</p>
 
-						<div class="command-list-item">
-							<p class="command">$ git reset --hard [commit]</p>
+          <div class="command-list-wrapper">
+            <div class="command-list-item">
+              <p class="command">$ git reset [commit]</p>
 
-							<p>Discards all history and changes back to the specified commit</p>
-						</div>
-					</div>
+              <p>Undoes all commits after [commit], preserving changes locally</p>
+            </div>
 
-					<p>CAUTION! Changing history can have nasty side effects. If you need to change commits that exist on GitHub (the remote), proceed with caution. If you need help, reach out at github.community or contact support.</p>
-				</div>
-			</div>
+            <div class="command-list-item">
+              <p class="command">$ git reset --hard [commit]</p>
 
-			<div class="content-item">
-				<h3>GitHub Flow</h3>
+              <p>Discards all history and changes back to the specified commit</p>
+            </div>
+          </div>
 
-				<div class="content-item-image"></div>
-			</div>
-		</div>
-	</section>
+          <p>CAUTION! Changing history can have nasty side effects. If you need to change commits that exist on GitHub
+            (the remote), proceed with caution. If you need help, reach out at github.community or contact support.</p>
+        </div>
+      </div>
 
-	<div class="summary">
-		<div class="content-summary">
-			<h3>Glossary</h3>
+      <div class="content-item">
+        <h3>GitHub Flow</h3>
 
-			<div class="content-summary-wrapper">
-				<p><span class="summary-span">git:</span> an open source, distributed version-control system</p>
+        <div class="content-item-image"></div>
+      </div>
+    </div>
+  </section>
 
-				<p><span class="summary-span">GitHub:</span> a platform for hosting and collaborating on Git repositories</p>
+  <div class="summary">
+    <div class="content-summary">
+      <h3>Glossary</h3>
 
-				<p><span class="summary-span">commit:</span> a Git object, a snapshot of your entire repository compressed into a SHA</p>
+      <div class="content-summary-wrapper">
+        <p><span class="summary-span">git:</span> an open source, distributed version-control system</p>
 
-				<p><span class="summary-span">branch:</span> a lightweight movable pointer to a commit</p>
+        <p><span class="summary-span">GitHub:</span> a platform for hosting and collaborating on Git repositories</p>
 
-				<p><span class="summary-span">clone:</span> a local version of a repository, including all commits and branches</p>
+        <p><span class="summary-span">commit:</span> a Git object, a snapshot of your entire repository compressed into
+          a SHA</p>
 
-				<p><span class="summary-span">remote:</span> a common repository on GitHub that all team member use to exchange their changes</p>
+        <p><span class="summary-span">branch:</span> a lightweight movable pointer to a commit</p>
 
-				<p><span class="summary-span">fork:</span> a copy of a repository on GitHub owned by a different user</p>
+        <p><span class="summary-span">clone:</span> a local version of a repository, including all commits and branches
+        </p>
 
-				<p><span class="summary-span">pull request:</span> a place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more</p>
+        <p><span class="summary-span">remote:</span> a common repository on GitHub that all team member use to exchange
+          their changes</p>
 
-				<p><span class="summary-span">HEAD:</span> representing your current working directory, the HEAD pointer can be moved to different branches, tags, or commits when using <span class="command-span">git checkout</span></p>
-			</div>
-		</div>
-	</div>
+        <p><span class="summary-span">fork:</span> a copy of a repository on GitHub owned by a different user</p>
 
-	<footer>
-		<div class="title">
-			<div class="logo">
-				<img src="images/github-logo-white.png" alt="GitHub Logo">
-			</div>
+        <p><span class="summary-span">pull request:</span> a place to compare and discuss the differences introduced on
+          a branch with reviews, comments, integrated tests, and more</p>
 
-			<h2>Training</h2>
-		</div>
+        <p><span class="summary-span">HEAD:</span> representing your current working directory, the HEAD pointer can be
+          moved to different branches, tags, or commits when using <span class="command-span">git checkout</span></p>
+      </div>
+    </div>
+  </div>
 
-		<div class="footer-content-wrapper">
-			<div class="footer-desc-text">
-				<p class="footer-desc">Want to learn more about using GitHub and Git?</p>
-				<p class="footer-desc">Email the Training Team or visit our web site for learning event schedules and private class availability.</p>
-			</div>
+  <footer>
+    <div class="title">
+      <div class="logo">
+        <img src="images/github-logo-white.png" alt="GitHub Logo">
+      </div>
 
-			<div class="footer-links">
-				<a href="services@github.com" class="footer-link" target="_blank">services@github.com</a>
-				<a href="https://services.github.com/" class="footer-link" target="_blank">services.github.com</a>
-			</div>
-		</div>
-	</footer>
+      <h2>Training</h2>
+    </div>
+
+    <div class="footer-content-wrapper">
+      <div class="footer-desc-text">
+        <p class="footer-desc">Want to learn more about using GitHub and Git?</p>
+        <p class="footer-desc">Email the Training Team or visit our web site for learning event schedules and private
+          class availability.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="services@github.com" class="footer-link" target="_blank">services@github.com</a>
+        <a href="https://services.github.com/" class="footer-link" target="_blank">services.github.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
