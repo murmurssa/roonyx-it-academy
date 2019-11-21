@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.main {
+  background: url(../images/main.jpg) center/cover;
+  filter: contrast(115%);
+}
+
+.ways, .reviews {
+  background-color: white;
+}
+
+.reasons {
+  background: url(../images/reasons.jpg) center;
+  background-size: auto 135%;
+}
+
+.shipping-form {
+  background: url(../images/shipping-form.jpg) center/cover;
+}
+
+header {
+  height: 70px;
+  width: 900px;
+  position: relative;
+  top: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: block;
+  position: relative;
+  height: 70px;
+  width: 210px;
+  pointer-events: all;
+}
+
+.header-logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  width: 210px;
+  pointer-events: none;
+  /* transition: fill 1s ease; */
+}
+
+.call-request-wrapper {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+p, a {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div > a {
+  border-bottom: 1px solid black;
+}
+
+.title-wrapper {
+  height: 350px;
+  width: 1000px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 70%
+  );
+  margin: auto;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 65px;
+  margin-bottom: 10px;
+}
+
+span {
+  display: table;
+  margin: auto;
+}
+
+.title-text {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+button {
+  border: none;
+  font: inherit;
+  font-size: 24px;
+  background: #FDAB13;
+  border-radius: 10px;
+  padding: 20px 60px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+h1, .title-text, button {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+
