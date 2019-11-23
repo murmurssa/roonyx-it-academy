@@ -18,7 +18,7 @@ body {
 }
 
 .ways, .reviews {
-  background-color: white;
+  background-color: rgba(255,255,255,1);
 }
 
 .reasons {
@@ -57,7 +57,6 @@ header {
   height: 70px;
   width: 210px;
   pointer-events: none;
-  /* transition: fill 1s ease; */
 }
 
 .call-request-wrapper {
@@ -75,11 +74,11 @@ p, a {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgba(0,0,0,1);
 }
 
 div > a {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0,0,0,1);
 }
 
 .title-wrapper {
@@ -117,24 +116,161 @@ span {
   line-height: 32px;
 }
 
-button {
+.button {
   border: none;
-  font: inherit;
   font-size: 24px;
-  background: #FDAB13;
+  background: rgba(253,171,19,1);
   border-radius: 10px;
-  padding: 20px 60px;
+  padding: 23px 60px 20px;
   cursor: pointer;
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
-h1, .title-text, button {
+h1, .title-text, .button, h2, h3, .ways-price, h4 {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
 }
+
+h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 36px;
+}
+
+.reasons-title {
+  color: rgba(255,255,255,1);
+}
+
+.ways-wrapper {
+  width: 1200px;
+  margin: auto;
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ways-item {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ways-image-1, .ways-image-2, .ways-image-3 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-45deg);
+  margin: 65px;
+}
+
+.ways-image-1::before, .ways-image-2::before, .ways-image-3::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.ways-image-1::before {
+  width: 175%;
+  height: 250%;
+  top: -117%;
+  left: -10%;
+  background: url(../images/ways-image-1.jpg) center/cover;
+}
+
+.ways-image-2::before {
+  width: 165%;
+  height: 155%;
+  top: -35%;
+  left: -56px;
+  background: url(../images/ways-image-2.jpg) center/cover;
+}
+
+.ways-image-3::before {
+  width: 179%;
+  height: 157%;
+  top: -33%;
+  left: -37%;
+  background: url(../images/ways-image-3.jpg) center/cover;
+}
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+
+.ways-desc {
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.reasons-wrapper {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.reasons-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 25px 15px;
+  margin: 20px;
+}
+
+.reasons-image-1, .reasons-image-2, .reasons-image-3, .reasons-image-4 {
+  width: 90px;
+  height: 90px;
+}
+
+.reasons-image-1 {
+  background: url(../svg/reasons-image-1.svg) center/cover;
+}
+
+.reasons-image-2 {
+  background: url(../svg/reasons-image-2.svg) center/cover;
+}
+
+.reasons-image-3 {
+  background: url(../svg/reasons-image-3.svg) center/cover;
+}
+
+.reasons-image-4 {
+  background: url(../svg/reasons-image-4.svg) center/cover;
+}
+
+.reasons-text-wrapper {
+  width: 300px;
+}
+
+h4 {
+  text-align: left;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.reasons-desc {
+  line-height: 25px;
+}
+
+.reasons-span {
+  margin-left: 0;
+}
+
 
 
