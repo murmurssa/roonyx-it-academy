@@ -1,3 +1,189 @@
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,500&display=swap');
 
+$height-full: 100%;
+$width-full: 100%;
+$width-half: 50%;
 
+$box: border-box;
+
+$kanit: 'Kanit', sans-serif;
+$weight-light: 300;
+$weight-medium: 500;
+$letter-spacing: 6px;
+$caps: uppercase;
+$low: lowercase;
+
+$xxs-size: 12px;
+$xs-size: 14px;
+$s-size: 16px;
+$m-size: 18px;
+$l-size: 24px;
+$xl-size: 28px;
+$xxl-size: 34px;
+$xxxl-size: 42px;
+
+$screen-sm: 320px;
+$screen-md: 768px;
+$screen-lg: 970px;
+$screen-xl: 1200px;
+
+.header {
+  width: $width-full;
+  background: $white;
+
+  @media (min-width: $screen-sm) {
+    height: 65px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 120px;
+  }
+}
+
+.content {
+  width: $width-full;
+  background: $white;
+
+  &__box {
+    width: $width-full;
+    display: flex;
+    color: $white;
+    font-family: $kanit;
+
+    @media (min-width: $screen-sm) {
+      height: 540px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 354px;
+      flex-wrap: nowrap;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 570px;
+    }
+  }
+
+  &__preview {
+    box-sizing: $box;
+
+    @media (min-width: $screen-sm) {
+      width: $width-full;
+    }
+
+    @media (min-width: $screen-md) {
+      width: $width-half;
+      height: $height-full;
+    }
+
+    &--image-01 {
+      $bg: url(../../assets/images/01.jpg);
+
+      @media (min-width: $screen-sm) {
+        height: 296px;
+        background: $bg 40% 105% no-repeat;
+        background-size: 123%;
+      }
+
+      @media (min-width: $screen-md) {
+        width: $width-half;
+        height: $height-full;
+      }
+    }
+
+    &--color-black {
+      background: $black;
+
+      @media (min-width: $screen-sm) {
+        height: 246px;
+        padding: 18px 13px 32px 12px;
+      }
+
+      @media (min-width: $screen-md) {
+        width: $width-half;
+        height: $height-full;
+      }
+    }
+  }
+
+  &__date {
+    font-weight: $weight-medium;
+    letter-spacing: $letter-spacing;
+
+    @media (min-width: $screen-sm) {
+      font-size: $xxs-size;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__link {
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: $weight-medium;
+    text-transform: $caps;
+
+    @media (min-width: $screen-sm) {
+      font-size: $m-size;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    text-transform: $low;
+    font-weight: $weight-light;
+
+    @media (min-width: $screen-sm) {
+      font-size: $xxs-size;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.button {
+  display: block;
+  font-size: $xxs-size;
+  text-transform: $caps;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+
+  &--main {
+    width: 198px;
+    box-sizing: $box;
+    border: 1px solid $white;
+    background: $black;
+
+    @media (min-width: $screen-sm) {
+      line-height: 38px;
+    }
+  }
+}
+
+.content-feed {
+  font-family: $kanit;
+  text-transform: $caps;
+
+  &__title {
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      display: block;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer {
+  width: $width-full;
+  height: 163px;
+  background: $black;
+}
