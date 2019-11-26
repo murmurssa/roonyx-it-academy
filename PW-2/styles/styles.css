@@ -31,16 +31,19 @@ body {
 }
 
 header {
+  top: 30px;
+}
+
+header, footer {
   height: 70px;
   width: 900px;
   position: relative;
-  top: 30px;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
+.header-logo, .footer-logo {
   display: block;
   position: relative;
   height: 70px;
@@ -48,7 +51,7 @@ header {
   pointer-events: all;
 }
 
-.header-logo svg {
+svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +62,15 @@ header {
   pointer-events: none;
 }
 
-.call-request-wrapper {
+.header-logo > svg {
+  fill: rgba(53,49,47,1);
+}
+
+.footer-logo > svg {
+  fill: rgba(255,255,255,1);
+}
+
+.call-request-wrapper, .info {
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -77,8 +88,13 @@ a {
   color: rgba(0,0,0,1);
 }
 
-div > a {
+header > .call-request-wrapper > a {
   border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+footer > .call-request-wrapper > a, footer > .info > a {
+  color: rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(255,255,255,1);
 }
 
 .title-wrapper {
@@ -117,16 +133,18 @@ span {
 }
 
 .button {
-  border: none;
-  font-size: 24px;
-  background: rgba(253,171,19,1);
-  border-radius: 10px;
-  padding: 23px 60px 20px;
-  cursor: pointer;
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%);
+}
+
+.button, button {
+  padding: 23px 60px 20px;
+  border: none;
+  font-size: 24px;
+  background: rgba(253,171,19,1);
+  border-radius: 10px;
   box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
@@ -339,5 +357,40 @@ h4 {
   margin-top: 15px;
 }
 
+.title-text-wrapper {
+  padding-top: 115px;
+}
 
+form {
+  width: 312px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
 
+input {
+  font: 21px Roboto, sans-serif;
+  padding: 17px 17px 15px;
+  border-radius: 13px;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: inset 3px 3px 4px rgba(0,0,0,0.3);
+}
+
+button {
+  font: 700 24px Roboto, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer {
+  color: rgba(255,255,255,1);
+  bottom: -100px;
+}
+
+.info {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
