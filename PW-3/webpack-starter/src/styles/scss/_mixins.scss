@@ -1,6 +1,6 @@
 @mixin half-block() {
-  width: $width-half;
-  height: $height-full;
+  width: 50%;
+  height: 100%;
 }
 
 @mixin font-settings($color: $white, $text-transform: uppercase, $font-weight: 500) {
