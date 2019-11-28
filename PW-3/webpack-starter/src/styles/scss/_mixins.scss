@@ -1,0 +1,14 @@
+@mixin half-block() {
+  width: $width-half;
+  height: $height-full;
+}
+
+@mixin font-settings($color: $white, $text-transform: uppercase, $font-weight: 500) {
+  color: $color;
+  text-transform: $text-transform;
+  font-weight: $font-weight;
+}
+
+@mixin bg-settings($bg) {
+  background: $bg center/cover;
+}

@@ -1,183 +1,347 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Kanit:300,500&display=swap');
 
-$height-full: 100%;
-$width-full: 100%;
-$width-half: 50%;
-
-$box: border-box;
-
-$kanit: 'Kanit', sans-serif;
-$weight-light: 300;
-$weight-medium: 500;
-$letter-spacing: 6px;
-$caps: uppercase;
-$low: lowercase;
-
-$xxs-size: 12px;
-$xs-size: 14px;
-$s-size: 16px;
-$m-size: 18px;
-$l-size: 24px;
-$xl-size: 28px;
-$xxl-size: 34px;
-$xxxl-size: 42px;
-
-$screen-sm: 320px;
-$screen-md: 768px;
-$screen-lg: 970px;
-$screen-xl: 1200px;
-
 .header {
-  width: $width-full;
-  background: $white;
-
-  @media (min-width: $screen-sm) {
+  @media (min-width: 320px) and (max-width: 969px) {
     height: 65px;
   }
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: 970px) and (max-width: 1199px) {
+    height: 100px;
+  }
+
+  @media (min-width: 1200px) {
     height: 120px;
   }
 }
 
 .content {
-  width: $width-full;
-  background: $white;
-
   &__box {
-    width: $width-full;
     display: flex;
-    color: $white;
     font-family: $kanit;
 
-    @media (min-width: $screen-sm) {
+    @media (min-width: 320px) and (max-width: 767px) {
       height: 540px;
       flex-wrap: wrap;
     }
 
-    @media (min-width: $screen-md) {
-      height: 354px;
+    @media (min-width: 768px) and (max-width: 969px) {
       flex-wrap: nowrap;
+      height: 354px;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: 970px) and (max-width: 1199px) {
+      height: 467px;
+    }
+
+    @media (min-width: 1200px) {
       height: 570px;
     }
   }
 
   &__preview {
-    box-sizing: $box;
-
-    @media (min-width: $screen-sm) {
-      width: $width-full;
-    }
-
-    @media (min-width: $screen-md) {
-      width: $width-half;
-      height: $height-full;
-    }
+    width: 100%;
+    box-sizing: border-box;
 
     &--image-01 {
-      $bg: url(../../assets/images/01.jpg);
+      @include bg-settings(url(../../assets/images/01.jpg));
 
-      @media (min-width: $screen-sm) {
+      @media (min-width: 320px) and (max-width: 767px) {
         height: 296px;
-        background: $bg 40% 105% no-repeat;
-        background-size: 123%;
       }
 
-      @media (min-width: $screen-md) {
-        width: $width-half;
-        height: $height-full;
+      @media (min-width: 768px) {
+        @include half-block();
       }
     }
 
     &--color-black {
-      background: $black;
+      background: $total-black;
+      @include half-block();
 
-      @media (min-width: $screen-sm) {
+      @media (min-width: 320px) and (max-width: 767px) {
+        width: 100%;
         height: 246px;
         padding: 18px 13px 32px 12px;
       }
 
-      @media (min-width: $screen-md) {
-        width: $width-half;
-        height: $height-full;
+      @media (min-width: 768px) and (max-width: 969px) {
+        padding: 77px 8px 0 21px;
+      }
+
+      @media (min-width: 970px) and (max-width: 1199px) {
+        padding: 105px 100px 0 85px;
+      }
+
+      @media (min-width: 1200px) {
+        padding: 115px 125px 0 109px;
       }
     }
   }
 
-  &__date {
-    font-weight: $weight-medium;
-    letter-spacing: $letter-spacing;
+  &__link {
+    @include font-settings();
+    text-decoration: underline;
+    position: absolute;
 
-    @media (min-width: $screen-sm) {
-      font-size: $xxs-size;
-      margin-bottom: 27px;
+    @media (min-width: 320px) and (max-width: 969px) {
+      display: none;
+    }
+
+    @media (min-width: 970px) and (max-width: 1199px) {
+      display: inline;
+      font-size: 14px;
+      right: 88px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      right: 109px;
+      top: 231px;
     }
   }
 
-  &__link {
-    @media (min-width: $screen-sm) {
-      display: none;
+  &__date {
+    font-size: 12px;
+    @include font-settings();
+    letter-spacing: 6px;
+
+    @media (min-width: 320px) and (max-width: 969px) {
+      margin-bottom: 27px;
+    }
+
+    @media (min-width: 970px) and (max-width: 1199px) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 14px;
+      margin-bottom: 75px;
     }
   }
 
   &__title {
-    font-weight: $weight-medium;
-    text-transform: $caps;
+    @include font-settings();
 
-    @media (min-width: $screen-sm) {
-      font-size: $m-size;
+    @media (min-width: 320px) and (max-width: 969px) {
+      font-size: 18px;
       margin-bottom: 25px;
+    }
+
+    @media (min-width: 970px) and (max-width: 1199px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 28px;
+      margin-bottom: 37px;
     }
   }
 
   &__text {
-    text-transform: $low;
-    font-weight: $weight-light;
+    @include font-settings($white, lowercase, 300);
+    font-size: 12px;
+    line-height: 18px;
 
-    @media (min-width: $screen-sm) {
-      font-size: $xxs-size;
-      line-height: 18px;
+    @media (min-width: 320px) and (max-width: 767px) {
       margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 54px;
     }
   }
 }
 
 .button {
   display: block;
-  font-size: $xxs-size;
-  text-transform: $caps;
-  color: $white;
+  @include font-settings();
+  font-size: 12px;
   text-decoration: none;
   text-align: center;
 
-  &--main {
-    width: 198px;
-    box-sizing: $box;
+  &--read-more {
+    box-sizing: border-box;
     border: 1px solid $white;
-    background: $black;
 
-    @media (min-width: $screen-sm) {
+    @media (min-width: 320px) and (max-width: 969px) {
+      width: 198px;
       line-height: 38px;
     }
+
+    @media (min-width: 970px) and (max-width: 1199px) {
+      width: 164px;
+      line-height: 43px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 197px;
+      line-height: 52px;
+    }
+  }
+
+  &--see-all {
+    background-color: $gray-button;
+    width: 238px;
   }
 }
 
 .content-feed {
   font-family: $kanit;
-  text-transform: $caps;
 
   &__title {
-    @media (min-width: $screen-sm) {
+    display: block;
+    @include font-settings($gray-text);
+
+    @media (min-width: 320px) and (max-width: 767px) {
       display: none;
     }
 
-    @media (min-width: $screen-md) {
-      display: block;
+    @media (min-width: 768px) {
+      margin: 67px 0 24px 24px;
       font-size: 18px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+      margin: 0 24px;
+    }
+  }
+}
+
+.content-item {
+  font-family: $kanit;
+
+  &__image {
+    &--medium {
+      @media (min-width: 320px) and (max-width: 767px) {
+        height: 195px;
+      }
+  
+      @media (min-width: 768px) and (max-width: 969px) {
+        height: 228px;
+      }
+  
+      @media (min-width: 970px) and (max-width: 1199px) {
+        height: 301px;
+      }
+  
+      @media (min-width: 1200px) {
+        height: 368px;
+      }
+    }
+
+    &--small {
+      @media (min-width: 320px) and (max-width: 969px) {
+        width: 220px;
+        height: 145px;
+      }
+
+      @media (min-width: 970px) and (max-width: 1199px) {
+        width: 293px;
+        height: 194px;
+      }
+
+      @media (min-width: 1200px) {
+        width: 363px;
+        height: 240px;
+      }
+    }
+
+    &--image-02 {
+      @include bg-settings(url(../../assets/images/02.jpg));
+    }
+
+    &--image-03 {
+      @include bg-settings(url(../../assets/images/03.jpg));
+    }
+
+    &--image-04 {
+      @include bg-settings(url(../../assets/images/04.jpg));
+    }
+
+    &--image-05 {
+      @include bg-settings(url(../../assets/images/05.jpg));
+    }
+
+    &--image-06 {
+      @include bg-settings(url(../../assets/images/06.jpg));
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    @include font-settings();
+    letter-spacing: 6px;
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+
+    &--total-black {
+      color: $total-black;
+    }
+
+    &--gray-text {
+      color: $gray-text;
+    }
+  }
+
+  &__link {
+    @include font-settings($total-black);
+    text-decoration: underline;
+    float: right;
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+
+    &--hide {
+      @media (min-width: 320px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        display: inline;
+      }
+    }
+  }
+
+  &--medium {
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 295px;
+    }
+
+    @media (min-width: 768px) and (max-width: 969px) {
+      width: 345px;
+    }
+
+    @media (min-width: 970px) and (max-width: 1199px) {
+      width: 455px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 557px;
+    }
+  }
+
+  &--small {
+    @media (min-width: 768px) {
+      width: 220px;
     }
   }
 }
@@ -185,5 +349,5 @@ $screen-xl: 1200px;
 .footer {
   width: $width-full;
   height: 163px;
-  background: $black;
+  background: $total-black;
 }
