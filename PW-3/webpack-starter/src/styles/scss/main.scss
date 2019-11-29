@@ -416,49 +416,17 @@
       }
     }
 
-    &--image-02 {
-      @include bg-settings(url(../../assets/images/02.jpg));
-    }
-
-    &--image-03 {
-      @include bg-settings(url(../../assets/images/03.jpg));
-    }
-
-    &--image-04 {
-      @include bg-settings(url(../../assets/images/04.jpg));
-    }
-
-    &--image-05 {
-      @include bg-settings(url(../../assets/images/05.jpg));
-    }
-
-    &--image-06 {
-      @include bg-settings(url(../../assets/images/06.jpg));
-    }
-
-    &--image-08 {
-      @include bg-settings(url(../../assets/images/08.jpg));
-    }
-
-    &--image-09 {
-      @include bg-settings(url(../../assets/images/09.jpg));
-    }
-
-    &--image-10 {
-      @include bg-settings(url(../../assets/images/10.jpg));
-    }
-
-    &--image-11 {
-      @include bg-settings(url(../../assets/images/11.jpg));
-    }
-
-    &--image-12 {
-      @include bg-settings(url(../../assets/images/12.jpg));
-    }
-
-    &--image-13 {
-      @include bg-settings(url(../../assets/images/13.jpg));
-    }
+    &--image-02 { @include bg-settings(url(../../assets/images/02.jpg)); }
+    &--image-03 { @include bg-settings(url(../../assets/images/03.jpg)); }
+    &--image-04 { @include bg-settings(url(../../assets/images/04.jpg)); }
+    &--image-05 { @include bg-settings(url(../../assets/images/05.jpg)); }
+    &--image-06 { @include bg-settings(url(../../assets/images/06.jpg)); }
+    &--image-08 { @include bg-settings(url(../../assets/images/08.jpg)); }
+    &--image-09 { @include bg-settings(url(../../assets/images/09.jpg)); }
+    &--image-10 { @include bg-settings(url(../../assets/images/10.jpg)); }
+    &--image-11 { @include bg-settings(url(../../assets/images/11.jpg)); }
+    &--image-12 { @include bg-settings(url(../../assets/images/12.jpg)); }
+    &--image-13 { @include bg-settings(url(../../assets/images/13.jpg)); }
   }
 
   &__link {
