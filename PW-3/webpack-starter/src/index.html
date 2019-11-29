@@ -1,16 +1,133 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> <%= htmlWebpackPlugin.options.title %> </title>
-  <meta name="viewport" content="width=device-width,initial- scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML-Week-2</title>
 </head>
-
 <body>
-  <h3>Welcome to Webpack 4 starter!!!</h3>
-  <img id="webpack-gif" alt="webpack-gif">
+  <header class="header">
+    <div class="header__menu"></div>
+    <div class="header__logo header__logo--normal"></div>
+  </header>
+  <section class="content">
+    <div class="content__box">
+      <div class="content__preview content__preview--image-01"></div>
+      <div class="content__preview content__preview--color-black">
+        <a href="" class="content__link content__link--white">Lifestyle</a>
+        <p class="content__date content__date--margin-bottom">10/10/2020</p>
+        <h1 class="content__title">At vero eos et accusamus et</h1>
+        <p class="content__text">
+          Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+          atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        </p>
+        <a href="" class="button button--white-border button--white-border--read-more">Read more</a>
+      </div>
+    </div>
+    <div class="content-feed">
+      <h2 class="content-feed__title content-feed__title--hide">Featured</h2>
+      <div class="content-feed__row content-feed__row--medium">
+        <div class="content-item content-item--medium">
+          <div class="content-item__image content-item--medium content-item__image--medium content-item__image--image-02"></div>
+          <a href="" class="content-item__link content__link content-item__link--hide">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--total-black content-item__date--large-margin">10/10/2020</p>
+          <h3 class="content-item__title content-item__title--medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h3>
+          <p class="content-item__text">
+            Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+          </p>
+        </div>
+        <div class="content-item content-item--medium">
+          <div class="content-item__image content-item--medium content-item__image--medium content-item__image--image-03"></div>
+          <a href="" class="content-item__link content__link content-item__link--hide">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--total-black content-item__date--large-margin">10/10/2020</p>
+          <h3 class="content-item__title content-item__title--medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h3>
+          <p class="content-item__text">
+            Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+          </p>
+        </div>
+      </div>
+      <div class="content-feed__row content-feed__row--small">
+        <div class="content-item content-item--margin-left content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-04"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+        <div class="content-item content-item--margin-center content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-05"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et</h4>
+        </div>
+        <div class="content-item content-item--margin-right content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-06"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+      </div>
+      <a href="" class="button button--see-all">See all</a>
+      <div class="content-feed__box">
+        <div class="content-feed__image content__preview"></div>
+        <div class="content-feed__preview content__preview">
+          <h1 class="content-feed__time">Issue 22 - May 2020</h1>
+          <a href="" class="button button--white-border button--white-border--subscribe-now">Subscribe now</a>
+        </div>
+      </div>
+      <h2 class="content-feed__title">Interviews</h2>
+      <div class="content-feed__row content-feed__row--small">
+        <div class="content-item content-item--margin-left content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-08"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+        <div class="content-item content-item--margin-center content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-09"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et</h4>
+        </div>
+        <div class="content-item content-item--margin-right content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-10"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+      </div>
+      <a href="" class="button button--see-all">See all</a>
+      <h2 class="content-feed__title">News</h2>
+      <div class="content-feed__row content-feed__row--small">
+        <div class="content-item content-item--margin-left content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-11"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+        <div class="content-item content-item--margin-center content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-12"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et</h4>
+        </div>
+        <div class="content-item content-item--margin-right content-item--small">
+          <div class="content-item__image content-item--small content-item__image--small content-item__image--image-13"></div>
+          <a href="" class="content-item__link content__link">Lifestyle</a>
+          <p class="content-item__date content__date content-item__date--gray-text">10/10/2020</p>
+          <h4 class="content-item__title content-item__title--small">At vero eos et accusamus et iusto</h4>
+        </div>
+      </div>
+      <a href="" class="button button--see-all">See all</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__logo header__logo"></div>
+    <div class="footer__copyright">Designed by Suffix</div>
+  </footer>
 </body>
-
 </html>
