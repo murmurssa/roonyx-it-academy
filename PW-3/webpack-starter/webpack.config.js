@@ -33,6 +33,19 @@ module.exports = {
             }
           }
         ]
+      },
+
+      {
+        test: [/.js$/],
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env'
+            ]
+          }
+        }
       }
     ]
   },
@@ -53,8 +66,8 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([{
-      from:'./src/assets/images',
-       to:'assets/images'
+      from: './src/assets/images',
+      to: 'assets/images'
     }])
   ]
 }
