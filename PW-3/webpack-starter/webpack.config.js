@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
 
   module: {
@@ -18,8 +18,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
-          'postcss-loader'
-        ]
+          'postcss-loader',
+        ],
       },
 
       {
@@ -29,10 +29,10 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/images'
-            }
-          }
-        ]
+              outputPath: 'assets/images',
+            },
+          },
+        ],
       },
 
       {
@@ -42,12 +42,12 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-env'
-            ]
-          }
-        }
-      }
-    ]
+              '@babel/preset-env',
+            ],
+          },
+        },
+      },
+    ],
   },
 
   plugins: [
@@ -57,17 +57,17 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
+        collapseWhitespace: false,
+      },
     }),
 
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'style.css',
     }),
 
     new CopyWebpackPlugin([{
       from: './src/assets/images',
-      to: 'assets/images'
-    }])
-  ]
-}
+      to: 'assets/images',
+    }]),
+  ],
+};
