@@ -5,6 +5,8 @@ function range(start, end, step = 1) {
     for (let i = start; i <= end; i += step) {
       arr.push(i);
     }
+  } else if (step === 0) {
+    return 'Step must be greater or less than zero!';
   } else {
     for (let i = start; i >= end; i += step) {
       arr.push(i);
