@@ -1,44 +1,77 @@
 // eslint-disable-next-line
-searchBtn.addEventListener('click', getUsernames);
-let userNames = [];
+searchButton.addEventListener('click', getUsernames);
 
 function createHtml(githubUser) {
-  const wrap = document.createElement('div');
-  wrap.className = 'user-card';
-  document.body.append(wrap);
-  const img = document.createElement('img');
-  img.src = githubUser.avatar_url;
-  const divMainInfo = document.createElement('div');
-  divMainInfo.className = 'user-card__main-info';
-  divMainInfo.innerHTML = `<h1>${githubUser.name}</h1><div>Some bio: ${githubUser.bio}</div>
-  <div>Location: ${githubUser.location}</div><div>Created: ${githubUser.created_at.substring(0, 4)}</div>`;
-  img.className = 'user-card__avatar';
-  const repos = document.createElement('div');
-  repos.className = 'user-card__other-info';
-  repos.innerHTML = `<p>Public repos :</p>  <div>${githubUser.public_repos}</div>`;
-  const gists = document.createElement('div');
-  gists.className = 'user-card__other-info';
-  gists.innerHTML = `<p>Public gists :</p>  <div>${githubUser.public_gists}</div>`;
-  const followers = document.createElement('div');
-  followers.className = 'user-card__other-info';
-  followers.innerHTML = `<p>Followers :</p>  <div>${githubUser.followers}</div>`;
-  const following = document.createElement('div');
-  following.className = 'user-card__other-info';
-  following.innerHTML = `<p>Following :</p>  <div>${githubUser.following}</div>`;
+  const userCard = document.createElement('div');
+  userCard.className = 'user-card';
+  document.body.append(userCard);
+
+  const userCardMainSection = document.createElement('div');
+  userCardMainSection.className = 'user-card__main-section';
+  userCard.append(userCardMainSection);
+
+  const userCardAvatar = document.createElement('img');
+  userCardAvatar.className = 'user-card__avatar';
+  userCardAvatar.src = githubUser.avatar_url;
+  userCardMainSection.append(userCardAvatar);
+
+  const userCardMainInfo = document.createElement('div');
+  userCardMainInfo.className = 'user-card__main-info';
+  userCardMainSection.append(userCardMainInfo);
+
+  const userCardName = document.createElement('h1');
+  userCardName.className = 'user-card__name';
+  userCardName.innerHTML = `${githubUser.name}`;
+  userCardMainInfo.append(userCardName);
+
+  const userCardBio = document.createElement('p');
+  userCardBio.className = 'user-card__bio';
+  userCardBio.innerHTML = `${githubUser.bio !== null ? githubUser.bio : 'Bio is empty'}`;
+  userCardMainInfo.append(userCardBio);
+
+  const userCardLocation = document.createElement('p');
+  userCardLocation.className = 'user-card__location';
+  userCardLocation.innerHTML = `Location: ${githubUser.location}`;
+  userCardMainInfo.append(userCardLocation);
+
+  const userCardDateCreation = document.createElement('p');
+  userCardDateCreation.className = 'user-card__date-creation';
+  userCardDateCreation.innerHTML = `Created: ${githubUser.created_at.substring(0, 4)}`;
+  userCardMainInfo.append(userCardDateCreation);
+
+  const userCardExtraSection = document.createElement('div');
+  userCardExtraSection.className = 'user-card__extra-section';
+  userCard.append(userCardExtraSection);
+
+  const userCardRepos = document.createElement('div');
+  userCardRepos.className = 'user-card__extra-info';
+  userCardRepos.innerHTML = `<p class="user-card__property">Public repos</p><p class="user-card__value">${githubUser.public_repos}</p>`;
+  userCardExtraSection.append(userCardRepos);
+
+  const userCardGists = document.createElement('div');
+  userCardGists.className = 'user-card__extra-info';
+  userCardGists.innerHTML = `<p class="user-card__property">Public gists</p><p class="user-card__value">${githubUser.public_gists}</p>`;
+  userCardExtraSection.append(userCardGists);
+
+  const userCardFollowers = document.createElement('div');
+  userCardFollowers.className = 'user-card__extra-info';
+  userCardFollowers.innerHTML = `<p class="user-card__property">Followers</p><p class="user-card__value">${githubUser.followers}</p>`;
+  userCardExtraSection.append(userCardFollowers);
+
+  const userCardFollowing = document.createElement('div');
+  userCardFollowing.className = 'user-card__extra-info';
+  userCardFollowing.innerHTML = `<p class="user-card__property">Following</p><p class="user-card__value">${githubUser.following}</p>`;
+  userCardExtraSection.append(userCardFollowing);
+
   const linkMore = document.createElement('a');
-  linkMore.href = `${githubUser.url}`;
+  linkMore.href = `${githubUser.html_url}`;
   linkMore.target = '_blank';
-  const btnMore = document.createElement('div');
-  btnMore.className = 'user-card__btn-more';
-  btnMore.innerHTML = '<p>more</p>';
-  linkMore.append(btnMore);
-  wrap.append(img);
-  wrap.append(divMainInfo);
-  wrap.append(repos);
-  wrap.append(gists);
-  wrap.append(followers);
-  wrap.append(following);
-  wrap.append(linkMore);
+  userCard.append(linkMore);
+
+  const buttonMore = document.createElement('div');
+  buttonMore.className = 'user-card__button';
+  buttonMore.innerHTML = '<p>More</p>';
+  linkMore.append(buttonMore);
 }
 
 function getUserData(url) {
@@ -48,8 +81,8 @@ function getUserData(url) {
 }
 
 function getUsernames() {
-  userNames = [];
+  const userNames = [];
   // eslint-disable-next-line
-  search.value.split(',').forEach(element => { userNames.push(element.trim()); });
+  searchInput.value.split(',').forEach(element => { userNames.push(element.trim()); });
   userNames.forEach((elem) => { getUserData(elem); });
 }

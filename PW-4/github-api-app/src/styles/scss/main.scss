@@ -1,0 +1,26 @@
+.search-form {
+  width: 650px;
+  margin: 50px auto;
+  
+  &__input {
+    height: 50px;
+    width: 550px;
+    border-radius: 40px 0 0 40px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    font: 14px sans-serif;
+    border-style: solid ;
+    border-color: #CCCCCC;
+    border-width: 2px 0 2px 2px;
+  }
+
+  &__button {
+    height: 50px;
+    width: 100px;
+    border-radius: 0 40px 40px 0;
+    font: 17px sans-serif;
+    background-color: #6EACD1;
+    border: none;
+    color: white;
+  }
+}
