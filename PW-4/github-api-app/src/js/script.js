@@ -20,17 +20,19 @@ function createHtml(githubUser) {
   userCardMainSection.append(userCardMainInfo);
 
   const userCardName = document.createElement('h1');
-  userCardName.className = 'user-card__name';
+  userCardName.className = 'user-card__name user-card__name_margin-bottom';
   userCardName.innerHTML = `${githubUser.name}`;
   userCardMainInfo.append(userCardName);
 
-  const userCardBio = document.createElement('p');
-  userCardBio.className = 'user-card__bio';
-  userCardBio.innerHTML = `${githubUser.bio !== null ? githubUser.bio : 'Bio is empty'}`;
-  userCardMainInfo.append(userCardBio);
+  if (githubUser.bio !== null) {
+    const userCardBio = document.createElement('p');
+    userCardBio.className = 'user-card__bio user-card__name_margin-bottom';
+    userCardBio.innerHTML = `${githubUser.bio}`;
+    userCardMainInfo.append(userCardBio);
+  }
 
   const userCardLocation = document.createElement('p');
-  userCardLocation.className = 'user-card__location';
+  userCardLocation.className = 'user-card__location user-card__name_margin-bottom';
   userCardLocation.innerHTML = `Location: ${githubUser.location}`;
   userCardMainInfo.append(userCardLocation);
 
@@ -64,14 +66,11 @@ function createHtml(githubUser) {
   userCardExtraSection.append(userCardFollowing);
 
   const linkMore = document.createElement('a');
+  linkMore.className = 'user-card__button';
+  linkMore.innerHTML = 'More';
   linkMore.href = `${githubUser.html_url}`;
   linkMore.target = '_blank';
   userCard.append(linkMore);
-
-  const buttonMore = document.createElement('div');
-  buttonMore.className = 'user-card__button';
-  buttonMore.innerHTML = '<p>More</p>';
-  linkMore.append(buttonMore);
 }
 
 function getUserData(url) {
