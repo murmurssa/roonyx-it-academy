@@ -1,0 +1,22 @@
+@import '_colors';
+
+.form {
+  &__input {
+    outline: none;
+
+    &.ng-touched.ng-invalid {
+      border: 2px red solid;
+    }
+  }
+}
+
+.button {
+  outline: none;
+  border-radius: 50%;
+  border-style: solid;
+
+  &_add {
+    background-color: $lightBlue;
+    border-color: $brightBlue;
+  }
+}

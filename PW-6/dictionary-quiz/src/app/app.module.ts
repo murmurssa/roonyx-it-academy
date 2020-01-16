@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HomeComponent, DictionaryComponent, QuizComponent } from './components';
+import { HomeComponent, DictionaryComponent, QuizComponent, CoupleWordsComponent } from './components';
+import { DictionaryService } from './services';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,13 +19,15 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     DictionaryComponent,
-    QuizComponent
+    QuizComponent,
+    CoupleWordsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
