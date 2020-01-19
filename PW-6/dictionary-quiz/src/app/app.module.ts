@@ -5,7 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent, DictionaryComponent, QuizComponent, CoupleWordsComponent } from './components';
-import { DictionaryService } from './services';
+import { DictionaryService, QuizService } from './services';
+import { ResultsComponent } from './components/results/results.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,14 +21,15 @@ const appRoutes: Routes = [
     HomeComponent,
     DictionaryComponent,
     QuizComponent,
-    CoupleWordsComponent
+    CoupleWordsComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule
   ],
-  providers: [DictionaryService],
+  providers: [DictionaryService, QuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

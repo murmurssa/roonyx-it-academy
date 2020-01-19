@@ -18,4 +18,8 @@ export class DictionaryService {
     words.push(this.couple);
     localStorage.setItem('words', JSON.stringify(words));
   }
+
+  getCoupleWords(index: number): CoupleWords {
+    return JSON.parse(localStorage.words)[index];
+  }
 }
