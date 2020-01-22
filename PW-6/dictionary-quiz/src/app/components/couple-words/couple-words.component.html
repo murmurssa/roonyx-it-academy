@@ -1,10 +1,27 @@
 <div class="couple-words">
   <ng-container *ngIf="!button">
-      <div class="couple-words__input-word">
-        <p>{{inputWord}}</p>
+    <div class="couple-words__word">
+      <p>{{inputWord}}</p>
+    </div>
+    <div class="couple-words__word">
+      <p>{{outputWord}}</p>
+    </div>
+    <button class="button button_change" (click)="changeState()"></button>
+    <button class="button button_delete" (click)="deleteCouple()"></button>
+  </ng-container>
+  <ng-container *ngIf="button">
+    <form class="form" [formGroup]="coupleWordsForm" (submit)="onSubmit()">
+      <div class="form__error-container" *ngIf="isControlInvalid('inputWord') || isControlInvalid('outputWord')">
+        <div class="form__error" *ngIf="isControlInvalid('inputWord')">
+          <p class="form__error-text">Please enter a word in English</p>
+        </div>
+        <div class="form__error form__error_right" *ngIf="isControlInvalid('outputWord')">
+          <p class="form__error-text">Please enter a translation in Russian</p>
+        </div>
       </div>
-      <div class="couple-words__output-word">
-        <p>{{outputWord}}</p>
-      </div>
+      <input class="form__input" formControlName="inputWord" />
+      <input class="form__input" formControlName="outputWord" />
+      <button class="button button_add" (click)="onSubmit()"></button>
+    </form>
   </ng-container>
 </div>

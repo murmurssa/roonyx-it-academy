@@ -8,6 +8,10 @@ export class DictionaryService {
 
   constructor() { }
 
+  getCoupleWords(index: number): CoupleWords {
+    return JSON.parse(localStorage.words)[index];
+  }
+
   getAllCoupleWords(): CoupleWords[] {
     return localStorage.words ? JSON.parse(localStorage.words) : [];
   }
@@ -19,7 +23,15 @@ export class DictionaryService {
     localStorage.setItem('words', JSON.stringify(words));
   }
 
-  getCoupleWords(index: number): CoupleWords {
-    return JSON.parse(localStorage.words)[index];
+  updateCouple(couple: CoupleWords, index: number): void {
+    const words: CoupleWords[] = this.getAllCoupleWords();
+    words[index] = couple;
+    localStorage.setItem('words', JSON.stringify(words));
+  }
+
+  deleteCouple(index: number): void {
+    const words: CoupleWords[] = this.getAllCoupleWords();
+    words.splice(index, 1);
+    localStorage.setItem('words', JSON.stringify(words));
   }
 }

@@ -1,0 +1,37 @@
+@import '_colors';
+@import '_mixins';
+
+.results-block {
+  width: 600px;
+  margin: 35px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    font: 42px 'Zilla Slab', serif;
+    color: $bright-blue;
+    margin: 0 auto 20px;
+  }
+
+  &__answer {
+    @include div(50px, 600px, $medium-blue, $white);
+    margin-bottom: 15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    &_right {
+      background-color: $green;
+    }
+
+    &_false {
+      background-color: $light-red;
+    }
+  }
+
+  &__text {
+    width: 160px;
+    text-align: left;
+  }
+}

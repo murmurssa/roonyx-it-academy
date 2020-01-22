@@ -43,7 +43,7 @@ export class QuizComponent implements OnInit {
   nextVariants(): void {
     setTimeout(() => {
       this.update();
-    }, 2000);
+    }, 500);
   }
 
   limiterCoupleCount(): void {
@@ -66,6 +66,6 @@ export class QuizComponent implements OnInit {
   }
 
   addClass(answer: string): string {
-    return this.answerIsGiven ? this.checkAnswer(answer) ? 'answer-true' : 'answer-false' : '';
+    return this.answerIsGiven ? this.checkAnswer(answer) ? 'quiz-block__answer-button_answer-true' : 'quiz-block__answer-button_answer-false' : '';
   }
 }

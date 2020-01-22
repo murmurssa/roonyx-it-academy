@@ -1,19 +1,21 @@
 <div class="dictionary-block">
-  <a routerLink="/quiz" class="quiz-button"></a>
+  <a routerLink="/quiz" class="quiz-link"></a>
   <form class="form" [formGroup]="addWordForm" (submit)="onSubmit()">
-    <label for="">English word</label>
-    <input class="form__input" type="text" formControlName="inputWord"/>
-    <div class="dictionary-block__error dictionary-block__error-input-word" *ngIf="isControlInvalid('inputWord')">
-      Please enter a word in English
+    <div class="form__error-container">
+      <div class="form__error" *ngIf="isControlInvalid('inputWord')">
+        <p class="form__error-text">Please enter a word in English</p>
+      </div>
+      <div class="form__error form__error_right" *ngIf="isControlInvalid('outputWord')">
+        <p class="form__error-text">Please enter a translation in Russian</p>
+      </div>
     </div>
-    <label for="">Russian translation</label>
-    <input class="form__input" type="text" formControlName="outputWord"/>
-    <div class="dictionary-block__error dictionary-block__error-output-word" *ngIf="isControlInvalid('outputWord')">
-      Please enter a translation in Russian
-    </div>
-    <button class="button button_add" type="submit">+</button>
+    <input class="form__input" placeholder="English word" formControlName="inputWord" />
+    <input class="form__input" placeholder="Russian translation" formControlName="outputWord" />
+    <button class="button button_add"></button>
   </form>
-  <div class="dictionary__list" *ngFor="let word of allCouples; let i = index">
-    <app-couple-words (onChanged)="onChanged($event)" [inputWord]="word.inputWord" [outputWord]="word.outputWord" [index]="i"></app-couple-words>
+  <div class="dictionary-block__list">
+    <div class="dictionary-block__item" *ngFor="let word of allCouples; let i = index">
+      <app-couple-words (onChanged)="onChanged($event)" [inputWord]="word.inputWord" [outputWord]="word.outputWord" [index]="i"></app-couple-words>
+    </div>
   </div>
 </div>

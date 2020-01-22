@@ -1,0 +1,51 @@
+@import '_colors';
+@import '_mixins';
+
+.dictionary-link {
+  @include link;
+  background-image: url(./../../../assets/svg/vocabulary.svg);
+}
+
+.error-block {
+  @include div(150px, 550px, $medium-red, $light-red, 'Zilla Slab');
+  margin: 55px auto;
+  border-radius: 25px;
+  font-size: 24px;
+}
+
+.quiz-block {
+  width: calc(620px + 25px + 50px);
+  margin: 35px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__right-word {
+    margin: 0 auto 35px;
+    font: 42px 'Zilla Slab', serif;
+    color: $bright-blue;
+  }
+
+  &__answer-container {
+    height: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  &__answer-button {
+    @include div(100px, 335px, $medium-blue, $white);
+    @include button-base;
+    border-radius: 25px;
+    font-size: 21px;
+    color: $bright-blue;
+
+    &_answer-true {
+      background-color: $green;
+    }
+
+    &_answer-false {
+      background-color: $light-red;
+    }
+  }
+}

@@ -11,14 +11,14 @@
     width: 50%;
     height: 100vh;
     box-sizing: border-box;
-    padding-top: 160px;
+    padding-top: 180px;
 
     &_red {
-      background-color: $lightRed;
+      background-color: $light-red;
     }
 
     &_blue {
-      background-color: $lightBlue;
+      background-color: $light-blue;
     }
   }
 }
@@ -47,11 +47,11 @@
     font-size: 45px;
     margin: 0;
     padding: 0 7px;
-    color: $brightBlue;
+    color: $bright-blue;
     transition: 0.3s;
 
     &:hover {
-      background-color: $brightBlue;
+      background-color: $bright-blue;
       color: $white;
     }
   }

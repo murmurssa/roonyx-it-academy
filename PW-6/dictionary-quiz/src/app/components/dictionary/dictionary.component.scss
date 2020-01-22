@@ -1,22 +1,24 @@
 @import '_colors';
+@import '_mixins';
 
-.form {
-  &__input {
-    outline: none;
-
-    &.ng-touched.ng-invalid {
-      border: 2px red solid;
-    }
-  }
+.dictionary-block {
+  width: calc(620px + 25px + 50px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
-.button {
-  outline: none;
-  border-radius: 50%;
-  border-style: solid;
+.quiz-link {
+  @include link;
+  background-image: url(./../../../assets/svg/quiz.svg);
+}
 
-  &_add {
-    background-color: $lightBlue;
-    border-color: $brightBlue;
-  }
+@include form;
+
+.button {
+ @include button;
+
+ &_add {
+  background-image: url(./../../../assets/svg/plus_icon.svg);
+ }
 }

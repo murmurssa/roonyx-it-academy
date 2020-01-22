@@ -1,0 +1,96 @@
+@mixin div($height, $width, $border-color, $bg-color, $font-family: 'Roboto Slab') {
+  height: $height;
+  width: $width;
+  border-color: $border-color;
+  background-color: $bg-color;
+  box-sizing: border-box;
+  font-family: $font-family, serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 3px;
+  border-style: solid;
+}
+
+@mixin input($border-color: $medium-blue, $bg-color: $white) {
+  @include div(50px, 270px, $border-color, $bg-color);
+  outline: none;
+  border-radius: 50px;
+}
+
+@mixin error {
+  @include input($medium-red, $light-red);
+}
+
+@mixin center-image($bg-size: $bg-size) {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: $bg-size;
+}
+
+@mixin button-base {
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+@mixin button($border-color: $medium-blue, $bg-color: $white) {
+  @include center-image(20px 20px);
+  @include button-base;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: $border-color;
+  background-color: $bg-color;
+
+  &:hover {
+    background-color: $bright-blue;
+  }
+}
+
+@mixin form($margin-bottom: 15px) {
+  .form {
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: $margin-bottom;
+
+    &__input {
+      @include input;
+      margin-right: 15px;
+
+      &.ng-touched.ng-invalid {
+        border-color: $medium-red;
+      }
+    }
+
+    &__error-container {
+      width: 555px;
+      height: 50px;
+      display: flex;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    &__error {
+      @include error;
+
+      &_right {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+
+@mixin link {
+  @include center-image(150px 150px);
+  display: block;
+  width: 170px;
+  height: 170px;
+  margin: 30px auto 0;
+}

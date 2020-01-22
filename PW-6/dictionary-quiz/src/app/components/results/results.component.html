@@ -1,8 +1,8 @@
 <div class="results-block">
-  <h1 class="results-block__title">Results</h1>
-  <div *ngFor="let answer of this.answerList" [ngClass]="answer.answerIsRight ? 'results_block__answer_right' : 'results_block__answer_false'" class="results_block__answer">
+  <p class="results-block__title">Results</p>
+  <div *ngFor="let answer of this.answerList" [ngClass]="answer.answerIsRight ? 'results-block__answer_right' : 'results-block__answer_false'" class="results-block__answer">
     <p class="results-block__text">Word: {{answer.rightWord.inputWord}}</p>
-    <p class="results-block__text">Translate: {{answer.rightWord.inputWord}}</p>
+    <p class="results-block__text">Translate: {{answer.rightWord.outputWord}}</p>
     <p class="results-block__text">Your answer: {{answer.answerSubmit}}</p>
   </div>
 </div>
