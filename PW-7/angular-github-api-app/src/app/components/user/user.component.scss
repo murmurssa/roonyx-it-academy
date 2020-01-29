@@ -1,0 +1,61 @@
+$white: #FFF;
+$lightGray: #CCC;
+$brown: #A52A2A;
+$purple: #3700B3;
+
+.cards-grid {
+  width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 40px;
+
+  &__header {
+    height: 152px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__avatar {
+    width: 152px;
+    border: solid 1px $lightGray;
+  }
+
+  &__main-info-group {
+    width: 200px;
+  }
+
+  &__extra-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__property {
+    margin: 0;
+  }
+
+  &__value {
+    margin: 0;
+    width: 40px;
+    text-align: center;
+    background-color: $purple;
+    color: $white;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+
+  &__button {
+    width: 100px;
+    margin: auto;
+  }
+}
