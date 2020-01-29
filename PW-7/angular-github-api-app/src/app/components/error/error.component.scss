@@ -1,0 +1,17 @@
+$error: #A52A2A;
+
+.error {
+  color: $error;
+
+  &__text {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  &__text-span {
+    display: table;
+    margin: 0 auto 5px;
+    font-weight: 700;
+    font-size: 35px;
+  }
+}
