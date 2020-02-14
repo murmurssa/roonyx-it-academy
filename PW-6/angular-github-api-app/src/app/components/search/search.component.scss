@@ -1,0 +1,17 @@
+.form {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  &__input-block {
+    width: 300px;
+  }
+
+  &__button {
+    height: 35px;
+    margin-top: 12px;
+    margin-left: 10px;
+    border-radius: 15px;
+    text-align: center;
+  }
+}

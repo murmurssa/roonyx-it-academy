@@ -1,0 +1,8 @@
+<form [formGroup]="searchForm" (ngSubmit)="searchUser()" class="form">
+  <mat-form-field class="form__input-block">
+    <input matInput formControlName="searchInput">
+  </mat-form-field>
+  <button mat-raised-button color="accent" [disabled]="searchForm.invalid" class="form__button">Search</button>
+</form>
+<app-user *ngIf="users" [users]="users"></app-user>
+<app-error *ngIf="error"></app-error>
