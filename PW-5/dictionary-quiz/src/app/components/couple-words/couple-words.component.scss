@@ -1,0 +1,33 @@
+@import '_colors';
+@import '_mixins';
+
+.couple-words {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__word {
+    @include input($white);
+    margin-right: 15px;
+    color: $bright-blue;
+  }
+}
+
+.button {
+  @include button;
+
+  &_change {
+    background-image: url(./../../../assets/svg/pen_icon.svg);
+    margin-right: 10px;
+  }
+
+  &_delete {
+    background-image: url(./../../../assets/svg/trash_icon.svg);
+  }
+
+  &_add {
+    background-image: url(./../../../assets/svg/check_icon.svg);
+  }
+}
+
+@include form(0);

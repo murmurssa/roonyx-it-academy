@@ -1,0 +1,18 @@
+<a routerLink="/dictionary" class="dictionary-link"></a>
+<div *ngIf="coupleCount <= 4; else quizBlock" class="error-block">
+  <p class="error-block__text">The dictionary must have at least 5 words!</p>
+</div>
+<ng-template #quizBlock>
+  <div *ngIf="!endWords; else resultsBlock" class="quiz-block">
+    <p class="quiz-block__right-word">{{rightWord.inputWord}}</p>
+    <div class="quiz-block__answer-container">
+      <button *ngFor="let answer of answerVariants" [ngClass]="addClass(answer)" (click)="submit(answer)"
+        [disabled]="answerIsGiven" class="quiz-block__answer-button">{{answer}}
+      </button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #resultsBlock>
+  <results></results>
+</ng-template>
+
