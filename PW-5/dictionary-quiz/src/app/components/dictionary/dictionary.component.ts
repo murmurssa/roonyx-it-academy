@@ -53,7 +53,6 @@ export class DictionaryComponent implements OnInit {
     if (this.addWordForm.invalid) {
       return;
     }
-    console.log(this.addWordForm.value);
     const couple: CoupleWords = this.addWordForm.value;
     this.dictionaryService.addCoupleWords(couple);
     this.update();
