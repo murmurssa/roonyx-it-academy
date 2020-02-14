@@ -1,0 +1,109 @@
+@import './colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+.search-form {
+  width: 650px;
+  margin: 50px auto;
+  
+  &__input {
+    height: 55px;
+    width: 550px;
+    border-radius: 40px 0 0 40px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    font: 16px 'Roboto', sans-serif;
+    border-style: solid ;
+    border-color: $lightGray;
+    border-width: 2px 0 2px 2px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    height: 55px;
+    width: 100px;
+    border-radius: 0 40px 40px 0;
+    font: 700 16px 'Roboto', sans-serif;
+    background-color: $babyBlue;
+    border: none;
+    color: $white;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.user-card {
+  width: 650px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  font: 16px 'Roboto', sans-serif;
+
+  &__main-section {
+    height: 200px;
+    display: flex;
+  }
+
+  &__avatar {
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid $lightGray;
+  }
+
+  &__main-info {
+    margin-left: 30px;
+    color: $darkGray;
+  }
+
+  &__name {
+    font-size: 30px;
+    font-weight: 700;
+    color: $black;
+
+    &_margin-bottom {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__extra-section {
+    margin-top: 20px;
+  }
+
+  &__extra-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    width: 40px;
+    text-align: center;
+    background-color: $brown;
+    color: $white;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+
+  &__button {
+    display: block;
+    width: 180px;
+    margin: 50px auto 0;
+    background-color: $babyBlue;
+    text-align: center;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    border-radius: 5px;
+  }
+}
